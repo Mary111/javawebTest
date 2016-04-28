@@ -38,6 +38,7 @@ public class CheckWriteServlet extends HttpServlet {
 		
 		if(null==password||"".equals(password)){
 			list.add("密码不能为空!");
+			System.out.println("password not null");
 		}else if(password.length()<3||password.length()>8){
 			list.add("密码长度应在3~8之间!");
 		}
