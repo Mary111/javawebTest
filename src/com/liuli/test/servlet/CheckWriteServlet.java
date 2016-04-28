@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CheckWriteServlet
  */
-@WebServlet("/CheckWriteServlet")
+
 public class CheckWriteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -28,13 +28,12 @@ public class CheckWriteServlet extends HttpServlet {
 		String password=request.getParameter("password");
 		String gender=request.getParameter("gender");
 		String[] interest=request.getParameterValues("interest");
-		String address=request.getParameter("address");
-		String commentString=request.getParameter("comment");
 		
 		List<String> list=new ArrayList<String>();
 		
 		if(null==username||"".equals(username)){
-			list.add("用户名不能为空!");			
+			list.add("用户名不能为空!");
+			System.out.println("username not null");
 		}
 		
 		if(null==password||"".equals(password)){
